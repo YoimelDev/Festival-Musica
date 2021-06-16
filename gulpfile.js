@@ -8,7 +8,7 @@ function css() {
         .pipe( dest('./build/css') )
 }
 
-function minificarCss() {
+function minificarcss() {
     return src('src/scss/app.scss')
         .pipe( sass({
             outputStyle: 'compressed'
@@ -21,5 +21,5 @@ function watchArchivos() {
 }
 
 exports.css = css;
-exports.minificarCss = minificarCss;
+exports.minificarcss = minificarcss;
 exports.watchArchivos = watchArchivos;
