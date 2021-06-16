@@ -8,7 +8,7 @@ function css() {
         .pipe( dest('./build/css') )
 }
 
-function minicarCss() {
+function minificarCss() {
     return src('src/scss/app.scss')
         .pipe( sass({
             outputStyle: 'compressed'
@@ -17,4 +17,4 @@ function minicarCss() {
 }
 
 exports.css = css;
-exports.minicarCss = minicarCss;
+exports.minificarCss = minificarCss;
