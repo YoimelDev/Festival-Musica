@@ -1,4 +1,4 @@
-const { series, src, dest } = require('gulp');
+const { series, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 
 // Funcion que compila SASS
@@ -16,5 +16,10 @@ function minificarCss() {
         .pipe( dest('./build/css') )
 }
 
+function watchArchivos() {
+    watch('src/scss/app.scss', css);
+}
+
 exports.css = css;
 exports.minificarCss = minificarCss;
+exports.watchArchivos = watchArchivos;
