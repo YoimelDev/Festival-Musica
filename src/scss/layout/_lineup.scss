@@ -1,0 +1,26 @@
+.lineup {
+  background-color: $rosa;
+  padding: $separacion;
+
+  h3,
+  p {
+    text-align: center;
+    color: $blanco;
+  }
+  .dia {
+    text-transform: uppercase;
+    margin: $separacion 0;
+  }
+}
+
+.escenarios-contenedor {
+  @include tablet {
+    @include grid(2, $separacion);
+  }
+
+  .nombre-escenario {
+    color: $negro;
+    font-size: 2rem;
+    font-weight: $delgada;
+  }
+}
