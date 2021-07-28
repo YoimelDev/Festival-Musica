@@ -28,5 +28,8 @@
     "gulp-notify": "^4.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-webp": "^4.0.1"
+  },
+  "dependencies": {
+    "optipng-bin": "^7.0.0"
   }
 }
