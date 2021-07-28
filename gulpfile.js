@@ -4,9 +4,13 @@ const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 
-// Funcion que compila SASS
+const paths = {
+    imagenes: 'src/img/**/*',
+    scss: 'src/scss/**/*.scss'
+}
+
 function css() {
-    return src('src/scss/app.scss')
+    return src(paths.scss)
         .pipe( sass({
             outputStyle: 'expanded'
         }) )
@@ -14,7 +18,7 @@ function css() {
 }
 
 function minificarcss() {
-    return src('src/scss/app.scss')
+    return src(paths.scss)
         .pipe( sass({
             outputStyle: 'compressed'
         }) )
@@ -22,21 +26,21 @@ function minificarcss() {
 }
 
 function imagenes() {
-    return src('src/img/**/*')
+    return src(paths.imagenes)
         .pipe( imagemin() )
         .pipe( dest('./build/img') )
         .pipe( notify({message: 'Imagen Minificada'}) );
 }
 
 function versionWebp() {
-    return src('src/img/**/*')
+    return src(paths.imagenes)
         .pipe( webp() )
         .pipe( dest('./build/img') )
         .pipe( notify({message: 'Version Webp lista'}) );
 }
 
 function watchArchivos() {
-    watch('src/scss/**/*.scss', css); // * = carpeta actual - ** = todos los archivos con esa extension
+    watch(paths.scss, css); // * = carpeta actual - ** = todos los archivos con esa extension
 }
 
 exports.css = css;
