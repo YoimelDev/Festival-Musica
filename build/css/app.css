@@ -391,6 +391,14 @@ h3 {
   margin: 0 auto;
 }
 
+.bg-verde {
+  background-color: #4cb8b3;
+}
+
+.bg-amarillo {
+  background-color: #fef46d;
+}
+
 .header {
   background-color: #4cb8b3;
 }
