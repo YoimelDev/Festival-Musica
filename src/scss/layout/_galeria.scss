@@ -36,7 +36,14 @@
   place-items: center;
 
   img {
-    width: 50%;
+    width: 90%;
+
+    @include tablet {
+      width: 60%;
+    }
+    @include desktop {
+      width: 50%;
+    }
   }
 }
 
