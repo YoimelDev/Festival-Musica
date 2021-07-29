@@ -11,14 +11,14 @@ You can see the result here → [Rock & EDM Festival](https://rock-edm-festival-
 <details>
     <summary>🖥️ Desktop version</summary>
 
-![](build/img/desktop.png)
+![](build/img/desktop.webp)
 
 </details>
 
 <details>
     <summary>📱 Mobile version</summary>
 
-![](build/img/mobile.png)
+![](build/img/mobile.webp)
 
 </details>
 
