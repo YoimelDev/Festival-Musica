@@ -8,7 +8,10 @@
 
   .contenedor-boletos {
     margin-top: $separacion / 2;
-    @include grid(2, $separacion);
+
+    @include telefono {
+      @include grid(2, $separacion);
+    }
   }
 
   .plan {
