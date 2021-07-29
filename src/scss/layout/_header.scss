@@ -33,7 +33,11 @@
   justify-content: center;
   a {
     color: $blanco;
-    font-size: 2rem;
+    font-size: 1.6rem;
+
+    @include telefono {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: $amarillo;
