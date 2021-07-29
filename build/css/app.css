@@ -650,6 +650,10 @@ h3 {
   place-items: center;
 }
 
+.overlay img {
+  width: 50%;
+}
+
 .btn-cerrar {
   width: 5rem;
   height: 5rem;
