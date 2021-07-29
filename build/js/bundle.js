@@ -30,8 +30,28 @@ function mostrarImagen(e) {
 
     const overlay = document.createElement('DIV');
     overlay.appendChild(imagen);
+    overlay.classList.add('overlay');
+
+    // Cuando se da click, cerrar la imagen
+    overlay.onclick = function() {
+        overlay.remove();
+        body.classList.remove('.fijar-body');
+    }
+
+    // Boton para cerrar la imagen
+    const cerrarImagen = document.createElement('P');
+    cerrarImagen.textContent = 'X';
+    cerrarImagen.classList.add('btn-cerrar');
+    
+    // Cuando se presiona, se cierra la imagen
+    cerrarImagen.onclick = function() {
+        overlay.remove();
+    }
+
+    overlay.appendChild(cerrarImagen);
 
     // Mostrar en el html
     const body = document.querySelector('body');
     body.appendChild(overlay);
+    body.classList.add('fijar-body')
 }
