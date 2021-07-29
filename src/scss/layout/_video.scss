@@ -3,7 +3,7 @@
   max-height: 90rem;
   overflow: hidden;
 
-  .overlay {
+  &__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -47,12 +47,22 @@
     flex-direction: column;
     align-items: flex-start;
     color: $blanco;
-    font-size: 7rem;
+    font-size: 2rem;
 
     span {
       background-color: $rosa;
-      font-size: 2rem;
-      padding: 1rem 2rem;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    @include telefono {
+      font-size: 4rem;
+
+      span {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+      }
     }
   }
 }
